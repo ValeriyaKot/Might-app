@@ -1,0 +1,63 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="book" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="feature.converter.converter.Converter.update_files" />
+          <option value="django_querysets.my_querysets.news.models.my_queries" />
+          <option value="django_querysets.my_querysets.library.models.my_queries" />
+          <option value="product_app.product_app.product.models.Product.*" />
+          <option value="todolist_app.todolist_app.todolist.models.ToDoList.*" />
+          <option value="todolist_app.todolist_app.account.models.Profile.*" />
+          <option value="todolist_app.todolist_app.todolist_app.urls.*" />
+          <option value="todolist_app.todolist_app.todolist.models.*" />
+          <option value="todolist_app.todolist_app.todolist_app.settings.*" />
+          <option value="django.db.models.fields.DecimalField.__mul__" />
+          <option value="views.CartViewSet" />
+          <option value="bookstore.apps.cart.apps.*" />
+          <option value="bookstore.apps.cart.models.*" />
+          <option value="bookstore.apps.cart.serializers.*" />
+          <option value="bookstore.apps.book.apps.*" />
+          <option value="bookstore.apps.book.models.Book.*" />
+          <option value="bookstore.apps.order.apps.*" />
+          <option value="pitch.apps.users.constants.*" />
+          <option value="pitch.apps.users.models.Profile.*" />
+          <option value="rest_framework.authtoken.models.Token.*" />
+          <option value="django.urls.url" />
+          <option value="django.db.models.fields.related.ForeignKey.*" />
+          <option value="django.contrib.sites.requests.*" />
+          <option value="pytest" />
+          <option value="rest_framework.test.*" />
+          <option value="factory" />
+          <option value="apps.users.serializers.*" />
+          <option value="apps.quizzes.tests.*" />
+          <option value="moodise_app.apps.users.serializer.UserSerializer" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

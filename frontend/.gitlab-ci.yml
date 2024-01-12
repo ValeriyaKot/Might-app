@@ -1,0 +1,53 @@
+'Frontend Linter':
+  image: node:8.15-alpine
+  stage: lint
+  artifacts:
+    paths:
+      - frontend/node_modules/
+  script:
+    - cd frontend
+    - npm i vue
+    - npm run lint
+  # only:
+  #   - develop
+
+'UI dependencies':
+  image: node:8.15-alpine
+  stage: dependencies
+  artifacts:
+    paths:
+      - frontend/node_modules/
+  dependencies: []
+  script:
+    - cd frontend
+    - npm install
+  only:
+    - develop
+
+'UI build':
+  image: node:8.15-alpine
+  stage: build
+  artifacts:
+    paths:
+      - frontend/dist/
+  dependencies:
+    - 'UI dependencies'
+  script:
+    - cd frontend
+    - npm i vue-loader-v16
+    - npm run build
+  only:
+    - develop
+
+
+'UI deploy':
+  stage: deploy
+  image: "ruby:2.5"
+  script:
+    - apt-get update -qy
+    - apt-get install rubygems ruby-dev -y
+    - gem install dpl
+    - cd frontend
+    - dpl --provider=heroku --app=$APP_NAME_DEV --api-key=$HEROKU_API_KEY
+  only:
+    - develop

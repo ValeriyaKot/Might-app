@@ -1,0 +1,46 @@
+'Backend linter':
+  image: python:latest
+  script:
+    - pip install flake8
+    - cd recognition_platform
+    - flake8 .
+  stage: lint
+  # only:
+  #   - develop
+
+'Build':
+  image: docker:19.03.0
+  services:
+    - name: docker:19.03.0-dind
+  stage: app_test_build
+  before_script:
+    - docker info
+    - apk add --no-cache py-pip
+    - pip install docker-compose==1.23.2
+  script:
+    - docker-compose -f docker-compose-local.yml build
+  only:
+    - develop
+
+'Deployment Staging':
+  image: ruby:2.4
+  stage: deploy
+  before_script:
+    - apt-get update -qy
+    - apt-get install rubygems ruby-dev -y
+    - gem install dpl
+    - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+  script:
+    - echo "Start deploy backend"
+    - cd recognition_platform
+    - dpl --provider=heroku --app=$API_APP_NAME_DEV --api-key=$HEROKU_API_KEY
+    - export HEROKU_API_KEY=$HEROKU_APIKEY
+    - heroku run --app $API_APP_NAME_DEV migrate
+  environment:
+    name: staging
+    url: $HEROKU_APP_HOST
+  except:
+    changes:
+      - "README.md"
+  only:
+    - develop

@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  backend:
+    tty: true
+    build: ./recognition_platform
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+        - ./recognition_platform:/app/backend/
+    ports:
+        - 8000:8000
+    depends_on:
+        - db
+    env_file:
+        - recognition_platform/.env
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8008:8008
+
+  frontend:
+    build:
+      context: frontend/
+      dockerfile: ./Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "8080:8080"
+    command: serve --single -p 8080 dist
+
+volumes:
+  static_volume:

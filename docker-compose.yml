@@ -1,0 +1,54 @@
+version: "3.3"
+
+services: 
+    backend:
+        tty: true
+        build: 
+            context: recognition_platform/
+            dockerfile: ./Dockerfile
+        command: sh /usr/src/app/backend/start.sh
+        expose:
+            - 8000
+        depends_on:
+            - db
+        volumes:
+            - static_volume:/usr/src/app/backend/static
+            - media_volume:/usr/src/app/backend/media
+        env_file: 
+            - ./recognition_platform/.env
+        
+    db:
+        image: postgres:alpine
+        volumes:
+            - postgres_data:/var/lib/postgresql/data/
+        environment: 
+            - POSTGRES_USER=test_user
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=rewards_db
+    frontend:
+        tty: true
+        build: 
+            context: frontend/
+            dockerfile: ./Dockerfile
+        depends_on: 
+            - backend
+        expose: 
+            - 44357
+        command: serve --single -p 44357 dist
+    nginx:
+        build: ./nginx
+        ports: 
+            - 80:80
+        depends_on: 
+            - backend
+            - frontend
+        volumes:
+            - static_volume:/usr/src/app/backend/static
+            - media_volume:/usr/src/app/backend/media    
+        
+        
+volumes: 
+    postgres_data:
+    static_volume:
+    media_volume:
+    frontend:

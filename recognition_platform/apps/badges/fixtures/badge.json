@@ -1,0 +1,385 @@
+[{
+  "fields": {
+    "name": "Managers badges",
+    "description": "",
+    "is_manager": true,
+    "icon": "asdf"
+  },
+  "model": "badges.GroupBadges",
+  "pk": 1
+},
+{
+  "fields": {
+    "name": "Employee to employee badges",
+    "description": "",
+    "is_manager": false,
+    "icon": "asdf"
+  },
+  "model": "badges.GroupBadges",
+  "pk": 2
+},
+{
+  "fields": {
+    "name": "Teammates badges",
+    "description": "",
+    "is_manager": false,
+    "icon": "asdf"
+  },
+  "model": "badges.GroupBadges",
+  "pk": 3
+},
+{
+  "fields": {
+    "name": "Activities",
+    "description": "",
+    "is_manager": false,
+    "icon": "asdf"
+  },
+  "model": "badges.GroupBadges",
+  "pk": 4
+},
+{
+  "fields": {
+    "title": "Enlightened",
+    "description": "Successfully passed the students lab and got the job",
+    "picture": "enlightened.png",
+    "group": 1
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Absorbs knowledge like a sponge",
+    "description": "",
+    "picture": "absorbs-knowledge-like-a-sponge.png",
+    "group": 1
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Asked Great Questions",
+    "description": "",
+    "picture": "sheldon-positive.png",
+    "group": 1
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Asked ‘Great’ Questions",
+    "description": "",
+    "picture": "sheldon-negative.png",
+    "group": 1
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Megamind",
+    "description": "gained new skills",
+    "picture": "megamind.png",
+    "group": 1
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "You crushed it!",
+    "description": "did something incredibly well with fervor and intention of completion",
+    "picture": "you-crushed-it.png",
+    "group": 1
+  },
+  "model": "badges.Badge"
+},
+
+{
+  "fields": {
+    "title": "Amazing Mentor",
+    "description": "",
+    "picture": "amazing-mentor.png",
+    "group": 2
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Inspirational Leader",
+    "description": "",
+    "picture": "leader-ship.png",
+    "group": 2
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Bro",
+    "description": "",
+    "picture": "bro.png",
+    "group": 2
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Mother Duck",
+    "description": "Recognize team managers",
+    "picture": "mother-duck.png",
+    "group": 2
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Cpt. Flint",
+    "description": "Recognize group managers",
+    "picture": "cpt-flint.png",
+    "group": 2
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Great Presentation",
+    "description": "For interesting presentation",
+    "picture": "great-presentation.png",
+    "group": 2
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Thank You",
+    "description": "",
+    "picture": "thank-you.png",
+    "group": 2
+  },
+  "model": "badges.Badge"
+},
+
+{
+  "fields": {
+    "title": "FOR THE EMPEROR",
+    "description": "Signed up for an impossible task and won",
+    "picture": "for-the-emperor.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Witness me",
+    "description": "Signed up for an impossible task and failed",
+    "picture": "witness-me.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Made ideas great again",
+    "description": "for unusual ideas",
+    "picture": "made-ideas-great-again.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Good boy/girl",
+    "description": "for positive feedback from the customer",
+    "picture": "good-boy-girl.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "The truth is out there",
+    "description": "Investigated quite complex issue",
+    "picture": "the-truth-is-out-there.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Stayed Focused",
+    "description": "",
+    "picture": "stayed-focused.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Helping hand",
+    "description": "for help on the project",
+    "picture": "helping-hand.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Dragged",
+    "description": "for outstanding commitment and work on the project",
+    "picture": "dragged.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Workaholic",
+    "description": "for hard work",
+    "picture": "workaholic.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Team Player",
+    "description": "for work for team success",
+    "picture": "team-player.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Work for food",
+    "description": "Made Great Contributions",
+    "picture": "work-for-food.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "I’m Waiting",
+    "description": "haven’t heard anything after appliance",
+    "picture": "i-am-waiting.png",
+    "group": 3
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Creative Guru",
+    "description": "for creative ideas in the office life",
+    "picture": "creative-guru.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Happy dealer",
+    "description": "Spread Happiness",
+    "picture": "happy-dealer.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Joker",
+    "description": "For Making Work Fun",
+    "picture": "joker.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Contactee",
+    "description": "or interactions with universities, students and education centers",
+    "picture": "contactee.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Stand-up",
+    "description": "For Awesome Meetup",
+    "picture": "stand-up.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Buddy",
+    "description": "for helping colleagues in the office",
+    "picture": "buddy.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Life of the party",
+    "description": "for activity on events",
+    "picture": "life-of-the-party.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Blogger",
+    "description": "for posts in social media with company symbols about the office life",
+    "picture": "blogger.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Sport star",
+    "description": "for sports activities",
+    "picture": "sport-star.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Mr/Miss Clean",
+    "description": "for being neat on working place and kitchen",
+    "picture": "mr-clean.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Botanic",
+    "description": "breeding new life forms in the kitchen",
+    "picture": "botanic.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Raccoon gargle",
+    "description": "for cleaning coffee machine",
+    "picture": "raccoon-gargle.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+},
+{
+  "fields": {
+    "title": "Courier",
+    "description": "Helped to deliver products (10 times e.g.) ",
+    "picture": "courier.png",
+    "group": 4
+  },
+  "model": "badges.Badge"
+}
+]
